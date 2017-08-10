@@ -1,0 +1,28 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# Logs and databases #
+######################
+*.log
+
+# OS generated files #
+######################
+.DS_Store*
+*.DS_Store
+thumbs.db
+Icon?
+Thumbs.db
+package-lock.json
+
+# Build Systems #
+######################
+node_modules
+.sass-cache
+.DS_Store
