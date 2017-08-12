@@ -1,0 +1,36 @@
+//-------------------------
+//--------MIXIN BREAKPOINTS
+//-------------------------
+
+/* EXAMPLE
+*    @include breakpoint (phone) {
+*        width: 40%;
+*    }
+*/
+
+
+
+@mixin breakpoint($point) {
+    @if $point == desktop--Large {//max-width = 1700px
+        @media (max-width: $desktop--Large)                               { @content; }
+    }
+    @if $point == desktop {//max-width = 1440px
+        @media (max-width: $desktop)                               { @content; }
+    }
+    @else if $point == tablet {//max-width = 1023px
+        @media (max-width: $tablet)                             { @content; }
+    }
+    @else if $point == mobile {//max-width = 767px
+        @media (max-width: $mobile)                             { @content; }
+    }
+    @else if $point == exeptGadgets {
+        @media (min-width: $tablet + 1)                     { @content; }
+    }
+}
+
+
+//------MEDIA QUERIES
+$desktop--Large  : 1700px;
+$desktop         : 1440px;
+$tablet          : 1023px;
+$mobile          : 767px;

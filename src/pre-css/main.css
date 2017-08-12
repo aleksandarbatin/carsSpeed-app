@@ -1,0 +1,227 @@
+/*------------------------------------------------------------------------------
+*    CSS Document (http://www.w3.org/Style/CSS/)
+*    For STYLEGUIDE, reffer to /config/_styleguide.scss
+-----------------------------------------------------------------------------*/
+/* EXAMPLE
+*    @include breakpoint (phone) {
+*        width: 40%;
+*    }
+*/
+/* EXAMPLE
+*
+*    @include borderRadius (10em 1em 3em 2px);
+*    @include borderRadius (3em);
+*/
+/* EXAMPLE
+*    @include transition (opacity 0.2s linear);
+*    Default is 'all 0.3s ease-in-out'
+*/
+/* EXAMPLE
+*    @include transform (rotate(10deg));
+*    Default is 'translate(-50%, -50%)'
+*/
+/* EXAMPLE
+*
+*	@include calc (width, "100% - 3rem");
+*		MUST USE QUOTES ON VALUE
+*/
+/* EXAMPLE
+*
+*    input { @include inputPlaceholder { color: #FA0; } }
+*/
+/* EXAMPLE
+*
+*    @include fontFace (FontName, fontFolder, 700, italic);
+*/
+/* EXAMPLE
+*    @include linear-gradient (to bottom, #222222 0%, #0f0f0f 100%);
+*    Default is 'to bottom, #222222 0%, #0f0f0f 100%'
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+
+q:before, q:after,
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details,
+figcaption, figure, footer,
+header, hgroup, main,
+menu, nav, section,
+summary {
+  display: block; }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0; }
+
+::selection {
+  color: #fff;
+  background-color: #262626; }
+
+::-moz-selection {
+  color: #fff;
+  background-color: #262626; }
+
+::-webkit-selection {
+  color: #fff;
+  background-color: #262626; }
+
+html {
+  overflow-y: scroll; }
+
+ul li {
+  display: inline-block; }
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+a {
+  outline: none;
+  text-decoration: none; }
+
+.fontelloIcon {
+  font-family: 'fontello';
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  -webkit-font-smoothing: antialiased; }
+
+input,
+textarea,
+select {
+  box-sizing: inherit; }
+
+input[type="search"] {
+  -webkit-appearance: textfield !important; }
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none; }
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("/fonts/Lato-Regular.eot?") format("eot"), url("/fonts/Lato-Regular.woff") format("woff"), url("/fonts/Lato-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("/fonts/Lato-Bold.eot?") format("eot"), url("/fonts/Lato-Bold.woff") format("woff"), url("/fonts/Lato-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Lato-Black";
+  src: url("/fonts/Lato-Black.eot?") format("eot"), url("/fonts/Lato-Black.woff") format("woff"), url("/fonts/Lato-Black.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Airways";
+  src: url("/fonts/Airways.eot?") format("eot"), url("/fonts/Airways.woff") format("woff"), url("/fonts/Airways.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "fontello";
+  src: url("/fonts/fontello.eot?") format("eot"), url("/fonts/fontello.woff") format("woff"), url("/fonts/fontello.ttf") format("truetype"), url("/fonts/fontello.svg#fontello") format("svg"); }
+
+body {
+  font-size: 100%;
+  font-family: "Lato-Regular", Arial, Helvetica, Tahoma, sans-serif;
+  color: black; }
+
+html {
+  font-size: 10px; }
+  @media (max-width: 1700px) {
+    html {
+      font-size: 0.58823529411vw; } }
+  @media (max-width: 1023px) {
+    html {
+      font-size: 1.30208333333vw; } }
+  @media (max-width: 767px) {
+    html {
+      font-size: 1.5625vw; } }
+
+body {
+  font-size: 100%;
+  font-family: "Lato-Regular", Arial, Helvetica, Tahoma, sans-serif; }
+
+b,
+strong {
+  font-weight: bold; }
+
+i,
+em {
+  font-style: italic; }
+
+u {
+  text-decoration: underline; }
+
+h1 {
+  font-size: 7.2rem; }
+
+.noScroll {
+  overflow: hidden; }
+
+.clear {
+  clear: both; }
+
+.hide {
+  display: none; }
+
+.block {
+  display: block; }
+
+.inline-block {
+  display: inline-block; }
+
+.fleft {
+  float: left; }
+
+.fright {
+  float: right; }
+
+.wrapUp {
+  height: auto;
+  overflow: hidden; }

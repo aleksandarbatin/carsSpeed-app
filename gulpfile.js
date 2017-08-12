@@ -62,15 +62,15 @@ gulp.task('watch', function(){
 // UGLIFY MAIN.JS
 // /////////////////////////////////////////////////
 
-gulp.task('uglify', function(){
-	gulp.src('src/js/*')
-		.pipe(uglify())
-		.pipe(gulp.dest('dist/js/'));
-});
+// gulp.task('uglify', function(){
+// 	gulp.src('src/js/*')
+// 		.pipe(uglify())
+// 		.pipe(gulp.dest('dist/js/'));
+// });
 
 
 // /////////////////////////////////////////////////
 // Default Task
 // /////////////////////////////////////////////////
 
-gulp.task('default',[ 'styles', 'uglify', 'html', 'browser-sync', 'watch' ]);
+gulp.task('default',[ 'styles', 'html', 'browser-sync', 'watch' ]);
