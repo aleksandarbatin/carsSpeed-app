@@ -24,5 +24,7 @@ package-lock.json
 # Build Systems #
 ######################
 node_modules
+src/pre-css
+dist/css
 .sass-cache
 .DS_Store
