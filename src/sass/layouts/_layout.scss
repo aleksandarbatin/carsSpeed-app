@@ -1,0 +1,17 @@
+//--------------------------------
+//-------------APP LAYOUT and GRID
+//--------------------------------
+
+//main page Wrapper
+
+.mainWrapper {
+	width: 80%;
+	margin: 0 auto;
+	@include breakpoint(tablet) {
+		width: 95%;
+	}
+}
+
+.app__display {
+	padding: 2rem 0;
+}

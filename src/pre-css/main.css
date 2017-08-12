@@ -146,26 +146,6 @@ input[type="search"] {
 input[type="search"]::-webkit-search-cancel-button {
   display: none; }
 
-@font-face {
-  font-family: "Lato-Regular";
-  src: url("/fonts/Lato-Regular.eot?") format("eot"), url("/fonts/Lato-Regular.woff") format("woff"), url("/fonts/Lato-Regular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Lato-Bold";
-  src: url("/fonts/Lato-Bold.eot?") format("eot"), url("/fonts/Lato-Bold.woff") format("woff"), url("/fonts/Lato-Bold.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Lato-Black";
-  src: url("/fonts/Lato-Black.eot?") format("eot"), url("/fonts/Lato-Black.woff") format("woff"), url("/fonts/Lato-Black.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Airways";
-  src: url("/fonts/Airways.eot?") format("eot"), url("/fonts/Airways.woff") format("woff"), url("/fonts/Airways.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "fontello";
-  src: url("/fonts/fontello.eot?") format("eot"), url("/fonts/fontello.woff") format("woff"), url("/fonts/fontello.ttf") format("truetype"), url("/fonts/fontello.svg#fontello") format("svg"); }
-
 body {
   font-size: 100%;
   font-family: "Lato-Regular", Arial, Helvetica, Tahoma, sans-serif;
@@ -199,7 +179,7 @@ u {
   text-decoration: underline; }
 
 h1 {
-  font-size: 7.2rem; }
+  font-size: 5.2rem; }
 
 .noScroll {
   overflow: hidden; }
@@ -225,3 +205,59 @@ h1 {
 .wrapUp {
   height: auto;
   overflow: hidden; }
+
+.mainWrapper {
+  width: 80%;
+  margin: 0 auto; }
+  @media (max-width: 1023px) {
+    .mainWrapper {
+      width: 95%; } }
+
+.app__display {
+  padding: 2rem 0; }
+
+.app__title h1 {
+  font-size: 3rem;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  text-align: center; }
+
+.displayBox {
+  float: left;
+  width: 33.33%;
+  height: 35rem;
+  margin: 0;
+  padding: 3rem;
+  border-bottom: 0.2rem solid #000;
+  border-right: 0.2rem solid #000; }
+  @media (max-width: 1023px) {
+    .displayBox {
+      width: 50%;
+      height: 25rem; } }
+  @media (min-width: 1024px) {
+    .displayBox:nth-child(n+4) {
+      border-bottom: none; } }
+  @media (min-width: 1024px) {
+    .displayBox:nth-child(3n) {
+      border-right: none; } }
+  @media (max-width: 1023px) {
+    .displayBox:nth-child(2n) {
+      border-right: none; } }
+  @media (max-width: 1023px) {
+    .displayBox:nth-of-type(5), .displayBox:nth-of-type(6) {
+      border-bottom: none; } }
+  .displayBox__inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 0.2rem solid #000;
+    border-radius: 1rem; }
+    .displayBox__inner img {
+      height: 15rem;
+      margin: 2rem auto; }
+      @media (max-width: 1023px) {
+        .displayBox__inner img {
+          height: 10rem; } }
+    .displayBox__inner h2 {
+      font-size: 2rem;
+      text-align: center; }

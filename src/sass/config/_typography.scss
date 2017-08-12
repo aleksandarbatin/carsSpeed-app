@@ -8,12 +8,6 @@
 // @include fontFace (fontello, /fontello, null, null, eot woff ttf svg);
 
 
- @include fontFace (Lato-Regular, Lato-Regular, null, null, eot woff ttf);
- @include fontFace (Lato-Bold, Lato-Bold, null, null, eot woff ttf);
- @include fontFace (Lato-Black, Lato-Black, null, null, eot woff ttf);
- @include fontFace (Airways, Airways, null, null, eot woff ttf);
- @include fontFace (fontello, fontello, null, null, eot woff ttf svg);
-
 
 //------FONT-SIZE
 
@@ -29,7 +23,7 @@ html {
     font-size  : $baseFontSize;
   //change this part
     @include breakpoint (desktop--Large) {
-        font-size: 0.58823529411vw; //10px - 170c0px
+        font-size: 0.58823529411vw; //10px - 1700px
     }
     // @include breakpoint (desktop) {
     //     font-size: 0.6944444444vw; //10px - 1440px
@@ -67,5 +61,5 @@ u {
 
 //------STYLES
 h1 {
-    font-size: 7.2rem;
+    font-size: 5.2rem;
 }

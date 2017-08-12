@@ -35,6 +35,13 @@
       "description": "The Fiat Punto is a supermini car produced by the Italian manufacturer Fiat since 1993.",
       "name": "Smart",
       "id": 5
+    },
+     {
+      "image": "http://pngimg.com/uploads/lamborghini/lamborghini_PNG10703.png",
+      "speed": 290,
+      "description": "The Fiat Punto is a supermini car produced by the Italian manufacturer Fiat since 1993.",
+      "name": "Lamborghini",
+      "id": 6
     }
   ],
   speed_limits: [
