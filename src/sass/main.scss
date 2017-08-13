@@ -11,10 +11,8 @@
 @import 'mixins/borderRadius';
 @import 'mixins/transition';
 @import 'mixins/transform';
-@import 'mixins/calc';
 @import 'mixins/placeholder';
 @import 'mixins/fontFace';
-@import 'mixins/gradient';
 @import 'mixins/vendor-prefixes';
 @import 'mixins/absolute-center';
 
@@ -30,6 +28,8 @@
 
 //------BLOCKS
 @import 'blocks/header';
+@import 'blocks/searchFilter';
+
 
 //------COMPONENTS
 @import 'components/displayBox';

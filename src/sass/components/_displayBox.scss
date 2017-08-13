@@ -7,34 +7,12 @@
 .displayBox {
 	float: left;
 	width: 33.33%;
-	height: 35rem;
+	height: 30rem;
 	margin: 0;
 	padding: 3rem;
-	border-bottom: 0.2rem solid #000;
-	border-right: 0.2rem solid #000;
 	@include breakpoint(tablet) {
 		width: 50%;
 		height: 25rem;
-	}
-	&:nth-child(n+4) {
-		@include breakpoint(exeptGadgets) {
-			border-bottom: none;
-		}	
-	} 
-	&:nth-child(3n) {
-		@include breakpoint(exeptGadgets) {
-			border-right: none;
-		}	
-	}
-	&:nth-child(2n) {
-		@include breakpoint(tablet) {
-			border-right: none;
-		} 
-	}
-	&:nth-of-type(5),&:nth-of-type(6) {
-		@include breakpoint(tablet) {
-			border-bottom: none;
-		}
 	}
 	&__inner {
 		width: 100%;
@@ -43,10 +21,10 @@
 		border: 0.2rem solid #000;
 		border-radius: 1rem;
 		img {
-			height: 15rem;
+			height: 12rem;
 			margin: 2rem auto;
 			@include breakpoint(tablet) {
-				height: 10rem;
+				height: 9rem;
 			}
 		}
 		h2 {
