@@ -227,7 +227,8 @@ h1 {
         height: 0.2rem; } }
   .app__display:before {
     left: auto;
-    right: 33.33%; }
+    right: 33.33%;
+    z-index: 55; }
     @media (max-width: 1023px) {
       .app__display:before {
         left: 3rem;
@@ -250,7 +251,8 @@ h1 {
     left: 3rem;
     width: 95%;
     height: 0.2rem;
-    background-color: #000; }
+    background-color: #000;
+    z-index: 55; }
     @media (max-width: 1023px) {
       .app__display .horizontal-line {
         display: none; } }
@@ -317,21 +319,32 @@ textarea:focus, input:focus {
   outline: none; }
 
 .displayBox {
+  position: relative;
   float: left;
   width: 33.33%;
   height: 30rem;
   margin: 0;
-  padding: 3rem; }
+  padding: 3rem;
+  -webkit-perspective: 1000;
+  /* Chrome, Safari, Opera */
+  perspective: 1000; }
   @media (max-width: 1023px) {
     .displayBox {
       width: 50%;
       height: 25rem; } }
   .displayBox__inner {
+    position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    border: 0.2rem solid #000;
-    border-radius: 1rem; }
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 1s linear;
+    -khtml-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+    cursor: pointer; }
     .displayBox__inner img {
       height: 12rem;
       margin: 2rem auto; }
@@ -341,3 +354,44 @@ textarea:focus, input:focus {
     .displayBox__inner h2 {
       font-size: 2rem;
       text-align: center; }
+    .displayBox__inner:hover {
+      -webkit-transform: rotateY(180deg);
+      -khtml-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+  .displayBox__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    border: 0.2rem solid #000;
+    -webkit-backface-visibility: hidden;
+    /* Chrome, Safari, Opera */
+    backface-visibility: hidden;
+    background-color: #fff; }
+  .displayBox__back {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 4rem 2rem;
+    -webkit-transform: rotateY(180deg);
+    -khtml-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    color: white;
+    text-align: center;
+    background-color: #141414;
+    border-radius: 1rem;
+    border: 0.2rem solid #000; }
+    @media (max-width: 1023px) {
+      .displayBox__back {
+        padding: 2rem; } }
+    .displayBox__back p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      text-align: left; }

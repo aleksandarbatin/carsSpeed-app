@@ -20,19 +20,32 @@ ourRequest.send();
 //RENDERING HTML
 
 function renderHTML(data) {
-	var carBox = document.getElementById("display");
+	var mainDisplay = document.getElementById("display");
 	var htmlString = "";
 	
 	for (var i = 0; i < data.cars.length; i++) {
-		htmlString += "<article class='displayBox'>" + "<div class='displayBox__inner'>" + "<img src='" + data.cars[i].image + "' />" + "<h2>" + data.cars[i].name + "</h2>" + "</div>" + "</article>";
+		htmlString += "<article class='displayBox'>" + "<div class='displayBox__inner'>" + "<div class='displayBox__face'>" + "<img src='" + data.cars[i].image + "' />" + "<h2>" + data.cars[i].name + "</h2>" + "</div>" + "</div>" + "</article>";
 	
 	}
 
-	carBox.insertAdjacentHTML('beforeend', htmlString);
+	mainDisplay.insertAdjacentHTML('beforeend', htmlString);
+	// add descriptio in car-box
+	function addDescription(data) {
+		var carBox = document.getElementsByClassName("displayBox__inner");
+		var descriptionString = "";
+		for(var z = 0; z < data.cars.length; z++) {
+			descriptionString += "<div class='displayBox__back'>" + "<p>" + data.cars[z].description + "</p>" + "<p>" + "Max-speed: "+ data.cars[z].speed + "</p>" + "</div>";
+			// for(var j = 0; j < carBox.length; j++) {
+				carBox[z].insertAdjacentHTML('beforeend', descriptionString);
+				descriptionString = "";
+ 			// }
+		
+		}
+
+	}
+	addDescription(data);
 }
 
-var x = document.getElementsByClassName('displayBox__inner');
-console.log(x.length);
 
 // FILTER CARS ON INPUT SERACH
 
