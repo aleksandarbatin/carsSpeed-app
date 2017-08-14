@@ -21,7 +21,6 @@
 @import 'config/reset';
 @import 'config/baseConfig';
 @import 'config/typography';
-@import 'config/helpers';
 
 //------LAYOUTS
 @import 'layouts/layout';
@@ -29,12 +28,8 @@
 //------BLOCKS
 @import 'blocks/header';
 @import 'blocks/searchFilter';
-
+@import 'blocks/animationField';
 
 //------COMPONENTS
 @import 'components/displayBox';
 
-//------SLIDER±S
-
-
-//------PAGES

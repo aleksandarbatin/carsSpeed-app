@@ -13,8 +13,8 @@
 
 body {
     font-size: 100%;
-    font-family: $baseFont;
     color: black;
+    font-family: $fontDefault; 
 }
 
 $baseFontSize: 10px; // DO NOT CHANGE THIS
@@ -43,7 +43,6 @@ html {
 //------GLOBAL FONT SETTINGS
 body {
     font-size: 100%;
-    font-family: $baseFont;
 }
 
 //------DEFAULT STYLES

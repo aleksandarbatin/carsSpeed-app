@@ -118,11 +118,6 @@ a {
   outline: none;
   text-decoration: none; }
 
-.fontelloIcon {
-  font-family: 'fontello';
-  font-weight: normal;
-  font-style: normal; }
-
 html {
   -webkit-font-smoothing: antialiased; }
 
@@ -139,8 +134,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 body {
   font-size: 100%;
-  font-family: "Lato-Regular", Arial, Helvetica, Tahoma, sans-serif;
-  color: black; }
+  color: black;
+  font-family: Arial, Helvetica, Tahoma, sans-serif; }
 
 html {
   font-size: 10px; }
@@ -155,8 +150,7 @@ html {
       font-size: 1.5625vw; } }
 
 body {
-  font-size: 100%;
-  font-family: "Lato-Regular", Arial, Helvetica, Tahoma, sans-serif; }
+  font-size: 100%; }
 
 b,
 strong {
@@ -171,31 +165,6 @@ u {
 
 h1 {
   font-size: 5.2rem; }
-
-.noScroll {
-  overflow: hidden; }
-
-.clear {
-  clear: both; }
-
-.hide {
-  display: none; }
-
-.block {
-  display: block; }
-
-.inline-block {
-  display: inline-block; }
-
-.fleft {
-  float: left; }
-
-.fright {
-  float: right; }
-
-.wrapUp {
-  height: auto;
-  overflow: hidden; }
 
 .mainWrapper {
   width: 60%;
@@ -318,6 +287,12 @@ h1 {
 textarea:focus, input:focus {
   outline: none; }
 
+.track-distance {
+  width: 100%; }
+  .track-distance td {
+    font-size: 2rem;
+    text-align: center; }
+
 .displayBox {
   position: relative;
   float: left;
@@ -327,13 +302,20 @@ textarea:focus, input:focus {
   padding: 3rem;
   -webkit-perspective: 1000;
   /* Chrome, Safari, Opera */
-  perspective: 1000; }
+  perspective: 1000;
+  z-index: 1; }
   @media (max-width: 1023px) {
     .displayBox {
       width: 50%;
       height: 25rem; } }
+  .displayBox:hover .displayBox__inner {
+    -webkit-transform: rotateY(180deg);
+    -khtml-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
   .displayBox__inner {
-    position: relative;
     width: 100%;
     height: 100%;
     -webkit-transform-style: preserve-3d;
@@ -354,13 +336,6 @@ textarea:focus, input:focus {
     .displayBox__inner h2 {
       font-size: 2rem;
       text-align: center; }
-    .displayBox__inner:hover {
-      -webkit-transform: rotateY(180deg);
-      -khtml-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-      -ms-transform: rotateY(180deg);
-      -o-transform: rotateY(180deg);
-      transform: rotateY(180deg); }
   .displayBox__face {
     position: absolute;
     width: 100%;
@@ -386,7 +361,11 @@ textarea:focus, input:focus {
     text-align: center;
     background-color: #141414;
     border-radius: 1rem;
-    border: 0.2rem solid #000; }
+    border: 0.2rem solid #000;
+    -webkit-backface-visibility: hidden;
+    /* Chrome, Safari, Opera */
+    backface-visibility: hidden;
+    z-index: 0; }
     @media (max-width: 1023px) {
       .displayBox__back {
         padding: 2rem; } }

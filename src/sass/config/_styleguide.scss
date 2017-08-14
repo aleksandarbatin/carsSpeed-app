@@ -27,7 +27,7 @@
     max-width            : 500px;
     height               : 100px;
     max-height           : 500px;
-    padding              : 1em; // Padding in EM
+    padding              : 1em; // Padding in REM
     margin               : 10rem auto; // Margin in REM
 
     position             : absolute;
@@ -71,8 +71,9 @@
         // Use variable for color values and any other commonly repeated value
         color: #0FA;
     }
-    @media (min-width: 320px) and (max-width: 1023px) and (orientation: vertical) {
-        background-color: #CAF;
+    // Use mixin breakpoints for media queries
+    @include breakpoint(tablet) {
+        width: 90%;
     }
     .child {
         font-size: 2.1rem;
