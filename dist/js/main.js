@@ -2,7 +2,7 @@
 //JSON http REQUEST
 
 var ourRequest = new XMLHttpRequest();
-ourRequest.open('GET', 'https://api.myjson.com/bins/vwuax');
+ourRequest.open('GET', 'https://api.myjson.com/bins/ljart');
 ourRequest.onload = function() {
 	if(ourRequest.status >= 200 && ourRequest.status < 400) {
 		var ourData = JSON.parse(ourRequest.responseText);
@@ -44,6 +44,28 @@ function renderHTML(data) {
 
 	}
 	addDescription(data);
+	// add speed limits
+	function addSpeedLimits(data) {
+		var speedSigns = document.getElementById("speedLimits");
+		var sign = "";
+		for(var n = 0; n < data.speed_limits.length; n++) {
+			sign += "<span class='speedLimits__sign'>" + data.speed_limits[n].speed + "</span>";
+		}
+		speedSigns.insertAdjacentHTML('beforeend', sign);
+		// function limitsPosition(data) {
+		// 	var signPlace = document.getElementsByClassName("speedLimits__sign");
+		// 	var positionNumber = "";
+		// 	for(var x = 0; x < signPlace.length; x++) {
+		// 		positionNumber += data.speed_limits[x].position;
+		// 		var dd = '"'+positionNumber+'"';
+		// 		console.log(dd);
+		// 		signPlace[x].style.left = dd;
+		// 		positionNumber = "";
+		// 	}
+		// }
+		// limitsPosition(data); 
+	}
+	addSpeedLimits(data);
 }
 
 

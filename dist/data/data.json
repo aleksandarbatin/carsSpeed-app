@@ -1,6 +1,6 @@
 {
-  distance: 50,
-  cars: [
+  "distance": 50,
+  "cars": [
     {
       "image": "https://lb.assets.fiat.com/assets/00/punto-my16/images/thumbnail/equipment/street.png",
       "speed": 148,
@@ -37,27 +37,27 @@
       "id": 5
     },
      {
-      "image": "http://pngimg.com/uploads/lamborghini/lamborghini_PNG10703.png",
+      "image": "http://pngimg.com/uploads/lamborghini/lamborghini_PNG10703.png?i=1",
       "speed": 290,
       "description": "The Fiat Punto is a supermini car produced by the Italian manufacturer Fiat since 1993.",
       "name": "Lamborghini",
       "id": 6
     }
   ],
-  speed_limits: [
+  "speed_limits": [
     {
-      position: 22,
-      speed: 60
+      "position": 22,
+      "speed": 60
     },
     {
-      position: 45,
-      speed: 80
-    },
+      "position": 45,
+      "speed": 80
+    }
   ],
-  traffic_lights: [
+  "traffic_lights": [
     {
-      position: 28,
-      duration: 3000
-    },
+      "position": 28,
+      "duration": 3000
+    }
   ]
 }
