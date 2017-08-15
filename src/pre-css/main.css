@@ -287,11 +287,20 @@ h1 {
 textarea:focus, input:focus {
   outline: none; }
 
-.track-distance {
-  width: 100%; }
-  .track-distance td {
-    font-size: 2rem;
-    text-align: center; }
+.track {
+  padding: 0 3rem; }
+  .track__measure {
+    width: 100%;
+    margin-bottom: 2rem; }
+    .track__measure td {
+      font-size: 2rem;
+      text-align: center; }
+  .track__lines {
+    width: 100%;
+    height: 30rem;
+    margin-bottom: 30rem;
+    border: 0.2rem solid #000;
+    border-radius: 1rem; }
 
 .displayBox {
   position: relative;
