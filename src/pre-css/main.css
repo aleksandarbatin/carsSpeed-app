@@ -290,17 +290,28 @@ textarea:focus, input:focus {
 .track {
   padding: 0 3rem; }
   .track__measure {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
     margin-bottom: 2rem; }
     .track__measure td {
       font-size: 2rem;
       text-align: center; }
   .track__lines {
     width: 100%;
-    height: 30rem;
+    height: 30.5rem;
     margin-bottom: 30rem;
     border: 0.2rem solid #000;
     border-radius: 1rem; }
+    .track__lines .line {
+      width: 100%;
+      height: 10rem;
+      border-bottom: 0.2rem solid #000; }
+      .track__lines .line:last-child {
+        border-bottom: none; }
+      .track__lines .line li {
+        width: 9.8%;
+        height: 10rem;
+        border-right: 0.2rem solid #DFDFDF; }
 
 .displayBox {
   position: relative;
