@@ -275,6 +275,7 @@ textarea:focus, input:focus {
   outline: none; }
 
 .track {
+  position: relative;
   padding: 0 3rem; }
   .track__measure {
     width: 95%;
@@ -328,6 +329,50 @@ textarea:focus, input:focus {
       -ms-transform: rotate(90deg);
       -o-transform: rotate(90deg);
       transform: rotate(90deg); }
+
+.trafficLights {
+  position: absolute;
+  bottom: -2rem;
+  left: 45%;
+  width: 8rem;
+  height: 11rem;
+  background-color: #eee;
+  border: 0.2rem solid #999;
+  border-radius: 1rem; }
+  .trafficLights:after {
+    position: absolute;
+    left: -13.2rem;
+    top: -17.5rem;
+    display: block;
+    content: "";
+    border: none;
+    color: #fff;
+    background-color: #fff;
+    border-top: 2px dashed #8c8b8b;
+    height: 1px;
+    width: 34rem;
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+.light {
+  width: 3rem;
+  height: 3rem;
+  border: 0.2rem solid #999;
+  margin: 1.5rem auto 0;
+  border-radius: 3rem; }
+
+.red {
+  background-color: red; }
+
+.green {
+  background-color: green; }
+
+.off {
+  background-color: transparent; }
 
 .displayBox {
   position: relative;

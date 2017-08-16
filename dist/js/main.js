@@ -27,9 +27,9 @@ function renderHTML(data) {
 		htmlString += "<article class='displayBox'>" + "<div class='displayBox__inner'>" + "<div class='displayBox__face'>" + "<img src='" + data.cars[i].image + "' />" + "<h2>" + data.cars[i].name + "</h2>" + "</div>" + "</div>" + "</article>";
 	
 	}
-
 	mainDisplay.insertAdjacentHTML('beforeend', htmlString);
-	// add descriptio in car-box
+
+	// Add descriptio in car-box
 	function addDescription(data) {
 		var carBox = document.getElementsByClassName("displayBox__inner");
 		var descriptionString = "";
@@ -39,12 +39,11 @@ function renderHTML(data) {
 				carBox[z].insertAdjacentHTML('beforeend', descriptionString);
 				descriptionString = "";
  			// }
-		
 		}
-
 	}
 	addDescription(data);
-	// add speed limits
+
+	// Add speed limits
 	function addSpeedLimits(data) {
 		var speedSigns = document.getElementById("speedLimits");
 		var sign = "";
@@ -65,6 +64,40 @@ function renderHTML(data) {
 		limitsPosition(data); 
 	}
 	addSpeedLimits(data);
+	// TRAFFIC LIGHTS
+
+	var lightStates = {red:0, green:1};
+	var currentState = lightStates.red;
+
+	var timeInterval = data.traffic_lights[0].duration;
+	console.log(timeInterval);
+
+	function launchLights() {
+	    setInterval(function(){
+	    	changeState(); }, timeInterval);
+	}
+
+	function changeState() {
+	  	clear();
+	    switch(currentState) {
+	        case lightStates.red: {
+	      	document.getElementById("red").className ="light red";
+	      	currentState = lightStates.green;
+	    }
+	    break;
+	    	case lightStates.green: {
+	      	document.getElementById("green").className ="light green";
+	     	currentState = lightStates.red;
+	    } 
+	    break;
+	   }
+	}
+
+	function clear(){
+	   document.getElementById("red").className ="light off";
+	   document.getElementById("green").className ="light off";
+	}
+	launchLights(data); 
 }
 
 
@@ -86,3 +119,4 @@ function filterCars() {
         }
     }
 }
+
