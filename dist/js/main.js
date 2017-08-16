@@ -52,18 +52,17 @@ function renderHTML(data) {
 			sign += "<span class='speedLimits__sign'>" + data.speed_limits[n].speed + "</span>";
 		}
 		speedSigns.insertAdjacentHTML('beforeend', sign);
-		// function limitsPosition(data) {
-		// 	var signPlace = document.getElementsByClassName("speedLimits__sign");
-		// 	var positionNumber = "";
-		// 	for(var x = 0; x < signPlace.length; x++) {
-		// 		positionNumber += data.speed_limits[x].position;
-		// 		var dd = '"'+positionNumber+'"';
-		// 		console.log(dd);
-		// 		signPlace[x].style.left = dd;
-		// 		positionNumber = "";
-		// 	}
-		// }
-		// limitsPosition(data); 
+		function limitsPosition(data) {
+			var signPlace = document.getElementsByClassName("speedLimits__sign");
+			var positionNumber = "";
+			for(var x = 0; x < signPlace.length; x++) {
+				positionNumber += data.speed_limits[x].position;
+				var dd = positionNumber+ "%";
+				signPlace[x].style.left = dd;
+				positionNumber = "";
+			}
+		}
+		limitsPosition(data); 
 	}
 	addSpeedLimits(data);
 }

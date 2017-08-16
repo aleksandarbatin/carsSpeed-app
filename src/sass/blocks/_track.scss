@@ -40,19 +40,26 @@
 #speedLimits {
 	position: relative;
 	span {
-		position: absolute;
+		position: relative;
 		top: 0;
-		display: block;
+		display: inline-block;
 		padding: 2rem;
 		font-size: 3.5rem;
 		border: 0.5rem solid #DFDFDF;
 		border-radius: 5rem;
-
-		&:first-child {
-			left: 22%;
-		}
-		&:last-child {
-			left: 55%;
+		&:after {
+			position: absolute;
+			left: -13.2rem;
+    		top: -17.5rem;
+			display: block;
+			content: "";
+			border: none;
+			color:#fff;
+			background-color: #fff;
+			border-top: 2px dashed #8c8b8b;
+			height: 1px;
+			width: 34rem;
+			@include transform (rotate(90deg));
 		}
 	}
 }

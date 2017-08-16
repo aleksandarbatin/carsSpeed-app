@@ -88,18 +88,6 @@ summary {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0; }
 
-::selection {
-  color: #fff;
-  background-color: #262626; }
-
-::-moz-selection {
-  color: #fff;
-  background-color: #262626; }
-
-::-webkit-selection {
-  color: #fff;
-  background-color: #262626; }
-
 html {
   overflow-y: scroll; }
 
@@ -315,17 +303,31 @@ textarea:focus, input:focus {
 #speedLimits {
   position: relative; }
   #speedLimits span {
-    position: absolute;
+    position: relative;
     top: 0;
-    display: block;
+    display: inline-block;
     padding: 2rem;
     font-size: 3.5rem;
     border: 0.5rem solid #DFDFDF;
     border-radius: 5rem; }
-    #speedLimits span:first-child {
-      left: 22%; }
-    #speedLimits span:last-child {
-      left: 55%; }
+    #speedLimits span:after {
+      position: absolute;
+      left: -13.2rem;
+      top: -17.5rem;
+      display: block;
+      content: "";
+      border: none;
+      color: #fff;
+      background-color: #fff;
+      border-top: 2px dashed #8c8b8b;
+      height: 1px;
+      width: 34rem;
+      -webkit-transform: rotate(90deg);
+      -khtml-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg); }
 
 .displayBox {
   position: relative;

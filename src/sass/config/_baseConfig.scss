@@ -12,10 +12,6 @@
 // * {
 //   transition: all 0.1s ease-in-out; }
 
-::selection          { color: $c-white; background-color: lighten($c-black, 15%); } // NORMAL
-::-moz-selection     { color: $c-white; background-color: lighten($c-black, 15%); } // FIREFOX
-::-webkit-selection  { color: $c-white; background-color: lighten($c-black, 15%); } // WEBKIT
-
 html {
 	overflow-y: scroll;
 }
