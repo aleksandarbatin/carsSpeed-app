@@ -385,12 +385,17 @@ textarea:focus, input:focus {
   top: 4.2rem;
   left: 3.2rem;
   overflow: hidden; }
-  #start span {
+  #start .displayBox__face {
+    position: relative;
     width: 9.3rem;
-    height: 10rem;
+    height: 9.9rem;
     float: left;
-    border-radius: 0.2rem;
-    background-color: red; }
+    border: none;
+    background-color: transparent; }
+    #start .displayBox__face img {
+      margin-top: 2rem; }
+    #start .displayBox__face h2 {
+      display: none; }
 
 .displayBox {
   position: relative;
