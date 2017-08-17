@@ -297,9 +297,13 @@ textarea:focus, input:focus {
       .track__lines .line:last-child {
         border-bottom: none; }
       .track__lines .line li {
+        position: relative;
         width: 9.8%;
         height: 10rem;
         border-right: 0.2rem solid #DFDFDF; }
+        .track__lines .line li span {
+          font-size: 2rem;
+          position: absolute; }
 
 #speedLimits {
   position: relative; }
@@ -312,17 +316,17 @@ textarea:focus, input:focus {
     border: 0.5rem solid #DFDFDF;
     border-radius: 5rem; }
     #speedLimits span:after {
+      display: block;
+      height: 1px;
+      width: 34rem;
       position: absolute;
       left: -13.2rem;
       top: -17.5rem;
-      display: block;
       content: "";
       border: none;
       color: #fff;
       background-color: #fff;
       border-top: 2px dashed #8c8b8b;
-      height: 1px;
-      width: 34rem;
       -webkit-transform: rotate(90deg);
       -khtml-transform: rotate(90deg);
       -moz-transform: rotate(90deg);
@@ -340,17 +344,17 @@ textarea:focus, input:focus {
   border: 0.2rem solid #999;
   border-radius: 1rem; }
   .trafficLights:after {
+    display: block;
+    height: 1px;
+    width: 34rem;
     position: absolute;
     left: -13.2rem;
     top: -17.5rem;
-    display: block;
     content: "";
     border: none;
     color: #fff;
     background-color: #fff;
     border-top: 2px dashed #8c8b8b;
-    height: 1px;
-    width: 34rem;
     -webkit-transform: rotate(90deg);
     -khtml-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -373,6 +377,20 @@ textarea:focus, input:focus {
 
 .off {
   background-color: transparent; }
+
+#start {
+  width: 9.3rem;
+  height: 30rem;
+  position: absolute;
+  top: 4.2rem;
+  left: 3.2rem;
+  overflow: hidden; }
+  #start span {
+    width: 9.3rem;
+    height: 10rem;
+    float: left;
+    border-radius: 0.2rem;
+    background-color: red; }
 
 .displayBox {
   position: relative;

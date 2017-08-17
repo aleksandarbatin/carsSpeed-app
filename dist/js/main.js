@@ -97,7 +97,23 @@ function renderHTML(data) {
 	   document.getElementById("red").className ="light off";
 	   document.getElementById("green").className ="light off";
 	}
-	launchLights(data); 
+	launchLights(data);
+
+	// SELECT CAR BOX and add it to the start position
+
+	function selectBox() {
+		var thisBox = document.getElementsByClassName("displayBox__inner");
+		var startPosition = document.getElementById("start");
+		for (i = 0; i < thisBox.length; i++) {
+		    thisBox[i].addEventListener("click", myFunction);
+		}
+		function myFunction() {
+			console.log(5555);
+			var span = document.createElement('span');  		
+			startPosition.appendChild(span);
+		}
+	}
+	selectBox(); 
 }
 
 
@@ -119,4 +135,6 @@ function filterCars() {
         }
     }
 }
+	
+
 
