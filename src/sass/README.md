@@ -5,18 +5,18 @@ To build SASS I used BUILDING BLOCKS logic and BEM methodology naming convention
 ## BUILDING BLOCKS
 
 Basic building blocks here actually are components and blocks. Blocks represent big unity that conists many small parts.
-For example HEADER and FOOTER and in this case mediaWALL all of them are complex unity that are compound of smaller parts. These parts can exist only in them or anywhere on the site.
+For example HEADER and FOOTER and in this case *track* all of them are complex unity that are compound of smaller parts. These parts can exist only in them or anywhere on the site.
 These small parts can also be COMPONENTS (acutally if parts exist not only in one block they are componets).
 ```
-BLOCKS: header, footer, mainWall
+BLOCKS: header, footer, track, app__display
 ```
 ## COMPONENTS
 
 Componets are small pieces of blocks usually. They are cells of project that are repeated in many places of course with modification which is realized through the block to which they belong.
 
-Here main components are TEASER they are small unity consisting of usually: image, title, text and some other elements and all of them calling (tease) or refer to the content that is in them.
+Here main component are displayBox they are small unity consisting of usually: image, title, text and some other elements and all of them calling (tease) or refer to the content that is in them.
 ```
-COMPONENTS: teaser/, breadcrumb, btn, commonStyle, sliderNavigation, stickySocial
+COMPONENTS: displayBox
 ```
 ## BEM METODOLOGY
 
