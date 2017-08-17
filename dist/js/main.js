@@ -99,21 +99,19 @@ function renderHTML(data) {
 	}
 	launchLights(data);
 
-	// SELECT CAR BOX and add it to the start position
-
+	// SELECT CAR BOX and add to START POSITION
 	function selectBox() {
 		var thisBox = document.getElementsByClassName("displayBox__inner");
 		var startPosition = document.getElementById("start");
 		for (i = 0; i < thisBox.length; i++) {
-		    thisBox[i].addEventListener("click", myFunction);
-		}
-		function myFunction() {
-			console.log(5555);
-			var span = document.createElement('span');  		
-			startPosition.appendChild(span);
+		    thisBox[i].addEventListener("click", function (e) {
+                console.log(this.childNodes[0]);
+                var car = this.childNodes[0].cloneNode(true);
+                startPosition.appendChild(car);
+            });
 		}
 	}
-	selectBox(); 
+	selectBox();
 }
 
 

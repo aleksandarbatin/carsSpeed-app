@@ -128,13 +128,19 @@
     top: 4.2rem;
     left: 3.2rem;
     overflow: hidden;
-	span {
+	.displayBox__face {
+		position: relative;
 		width: 9.3rem;
-		height: 10rem;
+		height: 9.9rem;
 		float: left;
-		
-		border-radius: 0.2rem;
-		background-color: red; 
+		border: none;
+		background-color: transparent;
+		img {
+			margin-top: 2rem;
+		}
+		h2 {
+			display: none;
+		}
 	}	
 }
 	
